@@ -211,15 +211,15 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
-
+        console.log(data);
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
         if (MD5($('#invite_code').val()) !== 'e1bf9e2a8e5fea6249935b940842b271'
-            // && MD5($('#invite_code').val()) !== '1649e93fee3f12072127709c518c0912'
+             && MD5($('#invite_code').val()) !== '1649e93fee3f12072127709c518c0912'
         ) {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbyXtHJRbvdjWf0QEFELHGtncNbrWoPN9H9lkJVpDgLk-3ai7AYMolMA0W_rtN5-BQm21w/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbzD12nSSN-6goTTJrTeOUk1wT4oS79_wFuNaGvtDYffBZ4PjDoTX2EhPv1-2m2F2HH1/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
