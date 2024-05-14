@@ -230,8 +230,10 @@ $(document).ready(function () {
                     }
                 })
                 .fail(function (data) {
+                    console.log("inside fail")
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
                 });
         }
     });
