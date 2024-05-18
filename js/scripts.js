@@ -167,12 +167,16 @@ $(document).ready(function () {
 
     /********************** Toggle Map Content **********************/
     $('#btn-show-map').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
+        // $('#map-content').toggleClass('toggle-map-content');
+        // $('#btn-show-content').toggleClass('toggle-map-content');
+       
+            window.open("https://maps.app.goo.gl/YVME1ncPiB8ZrwcR8");
     });
-    $('#btn-show-content').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
+   
+    $('#btn-show-rec').click(function () {
+        // $('#map-content').toggleClass('toggle-map-content');
+        // $('#btn-show-content').toggleClass('toggle-map-content');
+        window.open("https://maps.app.goo.gl/CoCadevk88N4mYw48");
     });
 
     /********************** Add to Calendar **********************/
