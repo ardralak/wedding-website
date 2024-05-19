@@ -229,6 +229,7 @@ $(document).ready(function () {
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
                     } else {
+                        document.getElementById('rsvp-form').reset();
                         $('#alert-wrapper').html('');
                         $('#rsvp-modal').modal('show');
                     }
@@ -236,6 +237,7 @@ $(document).ready(function () {
                 .fail(function (data) {
                     console.log("inside fail")
                     console.log(data);
+                    document.getElementById('rsvp-form').reset();
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
                 });
